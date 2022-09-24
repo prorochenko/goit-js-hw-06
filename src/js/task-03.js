@@ -15,6 +15,10 @@ const images = [
 
 const galleryList = document.querySelector('.gallery');
 
-const imgList = images.map(img => `<li><img src='${img.url}' alt='${img.alt}'/></li>`).join('');
+const makeImgCard = ({ url, alt }) => {
+  return `<li><img src='${url}' alt='${alt}'/></li>`;
+};
+
+const imgList = images.map(makeImgCard).join('');
 
 galleryList.insertAdjacentHTML('afterbegin', imgList);
