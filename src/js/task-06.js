@@ -1,8 +1,7 @@
 const inputForm = document.querySelector('#validation-input');
 const dataLength = Number(inputForm.getAttribute('data-length'));
 
-inputForm.addEventListener('blur', () => {
-  console.log(dataLength);
+function addRemoveClass() {
   if (inputForm.value.length !== dataLength) {
     inputForm.classList.add('invalid');
     inputForm.classList.remove('valid');
@@ -10,4 +9,6 @@ inputForm.addEventListener('blur', () => {
     inputForm.classList.add('valid');
     inputForm.classList.remove('invalid');
   }
-});
+}
+
+inputForm.addEventListener('blur', addRemoveClass);
