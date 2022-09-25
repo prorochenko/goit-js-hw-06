@@ -23,7 +23,7 @@ function createBoxes() {
     box.style.backgroundColor = getRandomHexColor();
     box.style.width = `${20 + 10 * i}px`;
     box.style.height = `${20 + 10 * i}px`;
-
+    //insert after the last child of the element boxes
     boxes.append(box);
   }
 }
