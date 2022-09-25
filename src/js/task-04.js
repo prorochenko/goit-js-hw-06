@@ -4,15 +4,15 @@ const incrementBtn = document.querySelector('[data-action="increment"]');
 const value = document.querySelector('#value');
 let counterValue = 0;
 
-function decrementBtnClick() {
+function onDecrementBtnClick() {
   counterValue -= 1;
   value.textContent = counterValue;
 }
 
-function incrementBtnClick() {
+function onIncrementBtnClick() {
   counterValue += 1;
   value.textContent = counterValue;
 }
 
-decrementBtn.addEventListener('click', decrementBtnClick);
-incrementBtn.addEventListener('click', incrementBtnClick);
+decrementBtn.addEventListener('click', onDecrementBtnClick);
+incrementBtn.addEventListener('click', onIncrementBtnClick);
