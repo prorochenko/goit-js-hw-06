@@ -11,8 +11,6 @@
 
 const submitForm = document.querySelector(`.login-form`);
 
-submitForm.addEventListener('submit', onSubmit);
-
 function onSubmit(event) {
   // Reset to default
   event.preventDefault();
@@ -33,3 +31,5 @@ function onSubmit(event) {
     event.currentTarget.reset();
   }
 }
+
+submitForm.addEventListener('submit', onSubmit);
